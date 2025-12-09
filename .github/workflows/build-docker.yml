@@ -37,7 +37,7 @@ jobs:
           docker push ${{ secrets.DOCKER_REGISTRY }}/customer-service:${{ github.sha }}
 
       - name: Save image tag for deploy job
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: image-tag
           path: image-tag.txt
