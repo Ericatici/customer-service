@@ -61,6 +61,7 @@ application-*.properties
 application-*.yml
 !application.yml
 !application-docker.yml
+!application-test.yml
 
 # Environment variables
 .env
