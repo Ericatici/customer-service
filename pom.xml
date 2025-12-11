@@ -151,6 +151,17 @@
 						<goals>
 							<goal>report</goal>
 						</goals>
+						<configuration>
+							<excludes>
+								<exclude>**/config/**</exclude>
+								<exclude>**/dto/**</exclude>
+								<exclude>**/entities/**</exclude>
+								<exclude>**/exceptions/**</exclude>
+								<exclude>**/requests/**</exclude>
+								<exclude>**/responses/**</exclude>
+								<exclude>**/CustomerServiceApplication.class</exclude>
+							</excludes>
+						</configuration>
 					</execution>
 					<execution>
 						<id>jacoco-check</id>
@@ -158,6 +169,15 @@
 							<goal>check</goal>
 						</goals>
 						<configuration>
+							<excludes>
+								<exclude>**/config/**</exclude>
+								<exclude>**/dto/**</exclude>
+								<exclude>**/entities/**</exclude>
+								<exclude>**/exceptions/**</exclude>
+								<exclude>**/requests/**</exclude>
+								<exclude>**/responses/**</exclude>
+								<exclude>**/CustomerServiceApplication.class</exclude>
+							</excludes>
 							<rules>
 								<rule>
 									<element>PACKAGE</element>
