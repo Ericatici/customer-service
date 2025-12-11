@@ -35,11 +35,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           mvn sonar:sonar \
-            -Dsonar.projectKey=Ericatici_customer-service \
-            -Dsonar.host.url=https://sonarcloud.io \
-            -Dsonar.organization=ericatici \
-            -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
-            -Dsonar.qualitygate.wait=true
+            -Dsonar.token=${{ secrets.SONAR_TOKEN }}
 
       - name: Upload coverage reports
         uses: actions/upload-artifact@v4
