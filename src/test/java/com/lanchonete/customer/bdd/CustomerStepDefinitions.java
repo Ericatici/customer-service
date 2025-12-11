@@ -32,13 +32,13 @@ public class CustomerStepDefinitions {
     @Autowired
     private ObjectMapper objectMapper;
 
-    @MockitoBean
+    @Autowired
     private CreateCustomerUseCase createCustomerUseCase;
 
-    @MockitoBean
+    @Autowired
     private FindCustomerUseCase findCustomerUseCase;
 
-    @MockitoBean
+    @Autowired
     private UpdateCustomerUseCase updateCustomerUseCase;
 
     private MvcResult result;
