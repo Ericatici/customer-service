@@ -4,11 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
-import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
@@ -25,9 +21,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-@SpringBootTest
-@AutoConfigureMockMvc
-@ActiveProfiles("test")
 public class CustomerStepDefinitions {
 
     @Autowired
@@ -36,13 +29,13 @@ public class CustomerStepDefinitions {
     @Autowired
     private ObjectMapper objectMapper;
 
-    @MockitoBean
+    @Autowired
     private CreateCustomerUseCase createCustomerUseCase;
 
-    @MockitoBean
+    @Autowired
     private FindCustomerUseCase findCustomerUseCase;
 
-    @MockitoBean
+    @Autowired
     private UpdateCustomerUseCase updateCustomerUseCase;
 
     private MvcResult result;
