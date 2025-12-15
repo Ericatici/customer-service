@@ -23,7 +23,7 @@ jobs:
         run: echo "TAG=$(cat image-tag.txt)" >> $GITHUB_OUTPUT
 
       - name: Setup kubectl
-        uses: azure/setup-kubectl@v3
+        uses: azure/setup-kubectl@v4
 
       - name: Configure kubeconfig
         run: |
