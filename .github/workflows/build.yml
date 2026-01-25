@@ -36,6 +36,14 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
 
+      - name: Start MySQL
+        uses: mirromutth/mysql-action@v1.1
+        with:
+          mysql root password: root
+          mysql database: test
+          mysql user: test
+          mysql password: test
+
       - name: Build and analyze
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
